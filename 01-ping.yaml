@@ -1,0 +1,4 @@
+- name: Ping server
+  hosts: web
+  tasks:
+  - name: pinging.builtin.ping
