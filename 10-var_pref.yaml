@@ -10,8 +10,8 @@
     private: false
   tasks:
   - name: variable from task
-    vars:
-     NAME: "Tarun form task"
+    #vars:
+    # NAME: "Tarun form task"
     ansible.builtin.debug:
      msg: "Hello everyone, Myself {{NAME}}"
 
