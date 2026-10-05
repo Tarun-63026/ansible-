@@ -1,4 +1,18 @@
 - name: Variable preferences
   hosts: localhost
   vars:
+   Name: "Tarun"
+  vars_files:
+  - vars.yaml
+  vars_promt:
+  - name: NAME
+    prompt: Please enter your Name
+    private: false
+  tasks:
+  - name: variable from task
+    vars:
+     NAME: "Kavya"
+     anisble.builtin.debug:
+      msg: "Hello everyone, Myself {{NAME}}"
+
   
