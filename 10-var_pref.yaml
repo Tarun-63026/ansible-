@@ -1,0 +1,4 @@
+- name: Variable preferences
+  hosts: localhost
+  vars:
+  
