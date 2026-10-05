@@ -1,0 +1,7 @@
+- name: variables form ini
+  hosts: localhost
+  tasks:
+  - name: Print information
+    ansible.builtin.debug:
+      msg: "Hi, Username is {{USERNAME}} and password is {{PASSWORD}}"
+  
