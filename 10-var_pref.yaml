@@ -1,17 +1,17 @@
 - name: Variable preferences
   hosts: localhost
   vars:
-   NAME: "Tarun"
+   NAME: "Tarun from vars"
   vars_files:
   - vars.yaml
   vars_prompt:
-  - name: NAME
+  - name: NAME from task
     prompt: Please enter your Name
     private: false
   tasks:
   - name: variable from task
     vars:
-     NAME: "Kavya"
+     NAME: "Tarun form task"
     ansible.builtin.debug:
      msg: "Hello everyone, Myself {{NAME}}"
 
