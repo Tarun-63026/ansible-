@@ -1,6 +1,6 @@
 - name: variables
   hosts: localhost
-  var:
+  vars:
    Course: "AWS"
    Trainer: "Shiva_kumar"
    Duration: "120 hours"
