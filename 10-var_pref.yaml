@@ -1,10 +1,10 @@
 - name: Variable preferences
   hosts: localhost
   vars:
-   Name: "Tarun"
+   NAME: "Tarun"
   vars_files:
   - vars.yaml
-  vars_promt:
+  vars_prompt:
   - name: NAME
     prompt: Please enter your Name
     private: false
