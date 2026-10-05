@@ -12,7 +12,7 @@
   - name: variable from task
     vars:
      NAME: "Kavya"
-     anisble.builtin.debug:
-      msg: "Hello everyone, Myself {{NAME}}"
+    anisble.builtin.debug:
+     msg: "Hello everyone, Myself {{NAME}}"
 
   
