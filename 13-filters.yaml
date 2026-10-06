@@ -6,3 +6,16 @@
    - name: defaults variable
      ansible.builtin.debug:
       msg: "Hello everyone, myself {{ NAME | default('Tarun') }}"
+
+
+# String Transformations (Upper & Lower Case)
+
+- name: convert string in upper case
+  hosts: localhost
+  vars:
+   greetings: "Hello, everyone"
+  tasks:
+  - name: convert string into upper case
+    ansible.builtin.debug:
+    msg: "{{greetings}} | upper"
+    
