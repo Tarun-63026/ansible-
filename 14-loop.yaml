@@ -20,7 +20,7 @@
     ansible.builtin.dnf:
      msg: "Installation of {{ item }} is success"
      name: "{{ item }}"
-     state: started
+     state: installed
     loop:
      - mysql
      - nginx
