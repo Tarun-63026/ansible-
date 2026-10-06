@@ -10,3 +10,22 @@
      - Devops
      - Linux
      - Tarun
+
+# 2. Batch Package Installation
+
+- name: loop demo
+  hosts: localhost
+  tasks: 
+  - name: loop demo
+    ansible.builtin.dnf:
+     msg: "Installation of {{ item }} is success"
+     name: "{{ item }}"
+     state: started
+    loop:
+     - mysql
+     - nginx
+     - postfix
+
+
+
+
