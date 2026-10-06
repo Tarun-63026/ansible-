@@ -62,5 +62,5 @@
     Duration: 120 hours
   tasks:
   - name: converting dict into list
-    ansbile.builtin.debug:
+    ansible.builtin.debug:
      msg: "{{ my_dict | dict2items }}"
