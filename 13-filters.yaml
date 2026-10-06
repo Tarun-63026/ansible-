@@ -50,3 +50,17 @@
   - name: find max age
     ansible.builtin.debug:
      msg: " Maximum age is {{ ages | max }} & Minmum age is {{ ages | min }}"
+
+# Dictionary and List Conversions
+
+- name: converting dict into list
+  hosts: localhost
+  var:
+   my_dict:
+    Course: DevOps
+    Trainer: Shiva
+    Duration: 120 hours
+  tasks:
+  - name: converting dict into list
+    ansbile.builtin.debug:
+     msg: "{{ my_dict | dict2items }}"
