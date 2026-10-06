@@ -39,3 +39,14 @@
   - name: remove duplicate values
     ansible.builtin.debug:
      msg: "{{ numbers | unique }}"
+
+# find maxium and minmum values
+
+- name: find maximum and minmum values
+  hosts: localhost
+  vars:
+   ages: [24,34,54,23,12]
+  tasks:
+  - name: find max age
+    ansible.builtin.debug:
+     msg: " Maximum age is {{ ages | max }} & Minmum age is {{ ages | min }}"
