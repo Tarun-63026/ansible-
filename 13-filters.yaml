@@ -55,7 +55,7 @@
 
 - name: converting dict into list
   hosts: localhost
-  var:
+  vars:
    my_dict:
     Course: DevOps
     Trainer: Shiva
