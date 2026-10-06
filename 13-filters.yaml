@@ -1,0 +1,8 @@
+# Demonstrating Default Values
+
+- name: default variable
+  hosts: localhost
+  tasks:
+   - name: defaults variable
+     ansible.builtin.debug:
+      msg: "Hello everyone, myself {{ NAME | default('Tarun') }}"
