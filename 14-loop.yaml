@@ -27,5 +27,22 @@
      - postfix
 
 
+  # 3. Managing Package States with Dictionaries
+ 
+
+- name: manage multiple packages
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: manage multiple packages with dict
+    ansbile.builtin.dnf:
+     name: "{{ item.name }}"
+     state: "{{ item.state }}"
+    loop:
+    - { name: mysql, state: absent }
+    - { name: postfix, state: absent }
+    - { name: fail2ban, state: installed }
+
+
 
 
