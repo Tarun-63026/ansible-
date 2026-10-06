@@ -27,3 +27,15 @@
   - name: convert string into lower case
     ansible.builtin.debug:
      msg: "{{ greetings | lower }}"
+
+
+#  List Manipulations (Unique Values, Min & Max)
+
+- name: remove duplicate values
+  hosts: localhost
+  vars:
+   numbers: [1,2,3,4,3,2,1,4,5,2]
+  tasks:
+  - name: remove duplicate values
+    ansible.builtin.debug:
+     msg: "{{ numbers | unique }}"
