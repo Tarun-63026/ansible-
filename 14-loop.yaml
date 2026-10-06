@@ -1,0 +1,12 @@
+# 1. Basic Loop Demonstration
+
+- name: loop demo
+  hosts: localhost
+  tasks: 
+  - name: loop demo
+    ansible.builtin.debug:
+    msg: "{{ items }}"
+    loop:
+     - Devops
+     - Linux
+     - Tarun
